@@ -2,9 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-
     <title>Login</title>
-    <c:import url="head.jsp" />
     <meta
       name="description"
       content="A high-quality &amp; free Bootstrap admin dashboard template pack that comes with lots of templates and components."
@@ -28,6 +26,10 @@
       crossorigin="anonymous"
     />
     <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       id="main-stylesheet"
       data-version="1.1.0"
@@ -35,22 +37,25 @@
     />
     <link rel="stylesheet" href="styles/extras.1.1.0.min.css" />
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
-    />
   </head>
-
   <body class="h-100">
     <div class="col-sm-12">
       <div class="row">
-        <div class="h-100 col-sm-12">
-          <div class="row d-flex justify-content-center">
-            <strong>Bem vindo Aluno</strong>
+        <div class="h-100 col-sm-12" style="margin-top: 5em">
+          <div
+            class="row d-flex justify-content-center"
+            style="margin-bottom: 5em"
+          >
+            <div class="col-sm-12 d-flex justify-content-center">
+              <h1 style="font-family: 'Pacifico', cursive;font-size: 5em">
+                TADS
+              </h1>
+            </div>
+            <div class="col-sm-12 d-flex justify-content-center">
+              <strong
+                >Tecnologia em Análise e Desenvolvimento de Sistemas</strong
+              >
+            </div>
           </div>
           <!-- main -->
           <main
@@ -63,6 +68,9 @@
               method="POST"
               class="col-sm-4"
             >
+              <div class="col-sm-12 d-flex justify-content-center">
+                <h6>Faça Login</h6>
+              </div>
               <!-- Email -->
               <div class="input-group mb-3">
                 <div class="input-group input-group-lg input-group-seamless">
@@ -79,7 +87,6 @@
                     required
                     placeholder="Email"
                   />
-                  <div class="invalid-feedback">Email invalido!</div>
                 </div>
               </div>
               <!-- Password -->
@@ -98,23 +105,17 @@
                       <i class="material-icons">lock</i>
                     </span>
                   </span>
-                  <div class="invalid-feedback">Senha invalida!</div>
                 </div>
               </div>
               <div class="input-group mb-3">
-                <a
-                  href="index.html"
-                  type="submit"
-                  id="loginIn"
-                  class="mb-2 btn btn-primary mr-2"
-                >
-                  Log In
+                <a href="index.html" class="mb-2 btn btn-outline-primary mr-2">
+                  <i class="material-icons">vpn_key</i> Login
                 </a>
               </div>
               <div class="input-group mb-3">
                 <span class="font-weight-light"
                   >Não tem uma conta ?
-                  <a href="CadastroCliente"><strong>Criar</strong></a></span
+                  <a href="new-user.html"><strong>Criar</strong></a></span
                 >
               </div>
             </form>
@@ -123,21 +124,5 @@
         </div>
       </div>
     </div>
-
-    <!-- <c:import url="/scripts.jsp"/> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
-    <script>
-      new Noty({
-        text: "${message}",
-        type: "${type}",
-        timeout: 3500,
-        progressBar: true,
-        theme: "metroui",
-        animation: {
-          open: "animated bounceInRight",
-          close: "animated bounceOutRight"
-        }
-      }).show();
-    </script>
   </body>
 </html>
