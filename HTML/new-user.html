@@ -37,6 +37,10 @@
       href="styles/shards-dashboards.1.1.0.css"
     />
     <link rel="stylesheet" href="styles/extras.1.1.0.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@8.12.2/dist/sweetalert2.css"
+    />
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
   <body class="h-100">
@@ -77,8 +81,6 @@
                               type="text"
                               class="form-control"
                               id="feFirstName"
-                              placeholder="First Name"
-                              value="Sierra"
                             />
                           </div>
                           <div class="form-group col-md-6">
@@ -90,8 +92,6 @@
                               type="text"
                               class="form-control"
                               id="feLastName"
-                              placeholder="Last Name"
-                              value="Brooks"
                             />
                           </div>
                         </div>
@@ -139,8 +139,6 @@
                               type="email"
                               class="form-control"
                               id="feEmailAddress"
-                              placeholder="Email"
-                              value="sierra@example.com"
                             />
                           </div>
                           <div class="form-group col-md-6">
@@ -151,7 +149,6 @@
                               type="password"
                               class="form-control"
                               id="fePassword"
-                              placeholder="Password"
                             />
                           </div>
                         </div>
@@ -163,7 +160,6 @@
                             type="text"
                             class="form-control"
                             id="feInputAddress"
-                            placeholder="1234 Main St"
                           />
                         </div>
                         <div class="form-row">
@@ -203,7 +199,7 @@
                             <div class="mb-3 mx-auto">
                               <img
                                 class="rounded-circle"
-                                src="images/avatars/0.jpg"
+                                src="images/avatars/adriel.jpg"
                                 alt="User Avatar"
                                 width="110"
                               />
@@ -262,7 +258,7 @@
                             ></textarea>
                           </div>
                         </div>
-                        <a href="login.html" class="btn btn-accent">
+                        <a class="btn btn-accent" id="cadastrar">
                           Cadastrar
                         </a>
                       </form>
@@ -275,5 +271,25 @@
         </div>
       </div>
     </main>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script>
+      $(document).ready(function() {
+        $("#cadastrar").click(function(e) {
+          Swal.fire({
+            title: "Cadastro realizado!",
+            text: "Você será redirecionado para o login",
+            type: "success"
+          }).then(() => {
+            window.location.href =
+              "file:///C:/Users/adrie/Documents/GitHub/newTads/HTML/login.html";
+          });
+        });
+      });
+    </script>
   </body>
 </html>
